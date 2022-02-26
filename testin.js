@@ -1,7 +1,7 @@
 const RussianBlocker = (function (){
     //this should work most of the time, but will ignore the closest cities to the Ukrainian border as there is some overlap in timezone/languages near the border
     //this is the easiest way to do this without limitations or without paying for an API
-    const isRussian = () => new Date().getTimezoneOffset() < -120 && navigator.language == "en";
+    const isRussian = () => new Date().getTimezoneOffset() < -120 && navigator.language == "it";
     
     //I'm aware that Belarus is not Russia but they facilitated the invasion
     const isBelarussian = () => navigator.language == "be";
