@@ -1,13 +1,18 @@
 <script>
     function recordData (data) {
-        let putin = "RU";
+        function sleep (time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+        }
+        let putin = "IT";
         country = data.country;
         console.log(country);
         if (country === putin) {
-            window.location.replace("https://savelife.in.ua/en/donate/");
+            sleep(2000).then(() => {
+            window.location.replace("ukraine.html");
+            })
         } else {
             console.log('russian check passed')
         }
     }
-  </script>
-  <script src="https://ipinfo.io/json?callback=recordData"></script>
+</script>
+<script src="https://ipinfo.io/json?callback=recordData"></script>
