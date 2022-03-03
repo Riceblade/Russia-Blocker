@@ -1,18 +1,16 @@
+<script src="https://ipinfo.io/json?callback=recordData"></script>
 <script>
-    function recordData (data) {
-        function sleep (time) {
-        return new Promise((resolve) => setTimeout(resolve, time));
-        }
-        let putin = "RU";
+    function recordData(data) {
+        const sleep = (ms) => { return new Promise((res) => setTimeout(res, ms)) }
+        const putin = "RU";
+        
         country = data.country;
-        console.log(country);
+        console.log(data.countr);
+        
         if (country === putin) {
             sleep(2000).then(() => {
-            window.location.replace("ukraine.html");
-            })
-        } else {
-            console.log('russian check passed')
-        }
+                window.location.replace("ukraine.html")
+            });
+        } else console.log("russian check passed");
     }
 </script>
-<script src="https://ipinfo.io/json?callback=recordData"></script>
